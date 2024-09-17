@@ -62,7 +62,7 @@ contract EventManager {
         Event storage e = events[_eventId];
         
         require(e.eventTime > block.timestamp, "Event already occurred");
-        require(e.attendees[msg.sender] == false, "You already claimed a ticket.");
+        require(!e.attendees[msg.sender], "You already claimed a ticket.");
         require(e.attendeeCount < e.maxAttendees, "Event is full.");
         require(msg.value == e.ticketPrice, "Incorrect payment amount.");
 
