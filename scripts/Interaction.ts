@@ -37,7 +37,7 @@ async function main(){
 
     console.log(reciept);
 
-    console.log(`Event Created successfully with id: }`)
+    console.log(`Event Created successfully with id: ${reciept}}`)
 
 
 
